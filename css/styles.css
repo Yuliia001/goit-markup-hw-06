@@ -531,10 +531,10 @@ footer{
     outline: transparent;
     padding-left: 16px;
     background-color: transparent;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
     color: var(--color-white);
 }
 .subscribe-input::placeholder {
@@ -658,13 +658,14 @@ footer{
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding-left: 38px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17px;
+    letter-spacing: 0.04em;
     color: var(--modal-overlay);
     outline: transparent;
     background-color: transparent;
+    transition: border-color var(--transition);
 
 }
 .modal-input:hover, .modal-input:focus{
@@ -692,6 +693,7 @@ footer{
     top: 50%;
     transform: translateY(-50%);
     fill: var(--dark);
+    transition: fill var(--transition);
 }
 .modal-textarea{
     width: 100%;
@@ -708,6 +710,7 @@ footer{
     letter-spacing: 0.04em;
     color: var(--modal-overlay);
     outline: transparent;
+    transition: border-color var(--transition);
 }
 .modal-textarea::placeholder{
     font-weight: 400;
