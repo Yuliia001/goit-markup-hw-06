@@ -197,7 +197,7 @@ body{
     background-color: var(--presses-state);
 }
 /* -------------------FUTURE PROMO---------------*/
-.visually-hidden-title{
+.visually-hidden{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -448,6 +448,7 @@ footer{
 .footer{
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex;
 }
 .logo-footer{
     font-family: 'Raleway',sans-serif;
@@ -503,6 +504,77 @@ footer{
 .social-icon {
     fill: var(--light);
 }
+
+
+.subscribe {
+    margin-left: 80px;
+}
+.subscribe-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+.subscribe-field {
+    display: flex;
+    
+}
+.subscribe-input {
+    width: 264px;
+    height: 40px;
+    margin-right: 24px;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));;
+    border-radius: 4px;
+    outline: transparent;
+    padding-left: 16px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-white);
+}
+.subscribe-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+}
+.subscribe-btn {
+    min-width: 165px;
+    height: 40px;
+    background: var(--logo-brand);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: var(--color-white);
+    border-radius: 4px;
+    border-color: transparent;
+    display: flex;
+    padding: 8px 24px;
+    transition: background-color var(--transition);
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: var(--presses-state);
+}
+.subscribe-wrap {
+    position: relative;
+}
+.subscribe-icon {
+    fill: var(--color-white);
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 /* --------------------MODAL-WINDOW---------------------- */
 .backdrop{
     position: fixed;
@@ -516,8 +588,7 @@ footer{
 }
 .modal{
     position: absolute;
-    min-width: 408px;
-    min-height: 576px;
+    width: 408px;
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -560,17 +631,162 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     transition: fill var(--trans);
+
 }
 .is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
+.modal-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--modal-overlay);
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+.modal-field{
+    margin-bottom: 8px;
+}
 
+.modal-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    padding-left: 38px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--modal-overlay);
+    outline: transparent;
+    background-color: transparent;
 
+}
+.modal-input:hover, .modal-input:focus{
+    border-color: var(--logo-brand);
+}
+.modal-input:hover + .modal-input-icon,
+.modal-input:focus + .modal-input-icon{
+    fill: var(--logo-brand);
+}
+.modal-label-text{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text);
+    margin-bottom: 4px;
+}
+.input-wrap{
+    position: relative;
+}
+.modal-input-icon{
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--dark);
+}
+.modal-textarea{
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    resize: none;
+    padding-top: 8px;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17px;
+    letter-spacing: 0.04em;
+    color: var(--modal-overlay);
+    outline: transparent;
+}
+.modal-textarea::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17px;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+.modal-textarea:hover,
+.modal-textarea:focus{
+    border-color: var(--logo-brand);
+}
+.textarea{
+    margin-bottom: 16px;
+}
+.modal-checkbox-field{
+    margin-bottom: 24px;
+}
+.modal-checkbox-text{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    display: flex;
+    gap: 8px;
+}
+.modal-checkbox-link{
+    color: var(--logo-brand);
+}
+.modal-checkbox-text span{
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+.modal-checkbox:checked + .modal-checkbox-text span {
+    background-color: var(--presses-state);
+    border-color: var(--presses-state);
+    fill: var(--light);   
+}
+/* .modal-checkbox-text::before{
+    content: '';
+    width: 16px;
+    height: 16px;
 
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: block;
+}
+.modal-checkbox:checked + .modal-checkbox-text::before{
+    background-color: var(--presses-state);
+    border-color: var(--presses-state); */
 
+.modal-btn {
+    min-width: 169px;
+    height: 56px;
+    background: var(--logo-brand);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: var(--color-white);
+    border-radius: 4px;
+    border-color: transparent;
+    display: block;
+    margin: 0 auto;
+    padding: 16px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--transition);
+}
 
-
-
-
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: var(--presses-state);
+}
