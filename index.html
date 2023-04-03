@@ -411,21 +411,16 @@
         <div class="subscribe">
           <p class="subscribe-text">Subscribe</p>
           <form class="subscribe-form">
-            <div class="subscribe-field">
-              <label for="user-name"></label>
               <input 
+                aria-label="subscribe-email"
                 type="email" 
                 class="subscribe-input"
                 name="subscribe-email"
                 id="subscribe-email"
                 placeholder="E-mail">
-              <div class="subscribe-wrap">
-                <button type="submit" class="subscribe-btn">Subscribe</button>
-                <svg class="subscribe-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-subscribe"></use>
-                </svg>
-              </div>
-            </div>
+              <button type="submit" class="subscribe-btn">Subscribe<svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+                </svg></button>
           </form>          
         </div>
       </div>
@@ -480,12 +475,12 @@
               </svg>
             </div>
           </div>
-          <div class="modal-field textarea">
+          <div class="modal-textarea-field">
             <label for="user-comment" class="modal-label-text">Comment</label>
             <textarea 
+              name="user-comment" 
+              id="user-comment" 
               class="modal-textarea"
-              name="user-textarea" 
-              id="user-comment"
               placeholder="Text input"></textarea>
           </div>
           <div class="modal-checkbox-field">

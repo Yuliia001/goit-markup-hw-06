@@ -517,7 +517,7 @@ footer{
     color: var(--color-white);
     margin-bottom: 16px;
 }
-.subscribe-field {
+.subscribe-form {
     display: flex;
     
 }
@@ -545,6 +545,9 @@ footer{
     color: var(--color-white);
 }
 .subscribe-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     min-width: 165px;
     height: 40px;
     background: var(--logo-brand);
@@ -557,7 +560,6 @@ footer{
     color: var(--color-white);
     border-radius: 4px;
     border-color: transparent;
-    display: flex;
     padding: 8px 24px;
     transition: background-color var(--transition);
 }
@@ -565,15 +567,8 @@ footer{
 .subscribe-btn:focus {
     background-color: var(--presses-state);
 }
-.subscribe-wrap {
-    position: relative;
-}
 .subscribe-icon {
-    fill: var(--color-white);
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    fill: var(--color-white);   
 }
 /* --------------------MODAL-WINDOW---------------------- */
 .backdrop{
@@ -597,6 +592,7 @@ footer{
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--transition);
     padding: 24px;
+    padding-top: 72px;
     
 }
 .backdrop.is-hidden .modal{
@@ -645,7 +641,6 @@ footer{
     letter-spacing: 0.02em;
     color: var(--modal-overlay);
     text-align: center;
-    margin-top: 48px;
     margin-bottom: 16px;
 }
 .modal-field{
@@ -676,7 +671,7 @@ footer{
     fill: var(--logo-brand);
 }
 .modal-label-text{
-    display: inline-block;
+    display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -695,7 +690,11 @@ footer{
     fill: var(--dark);
     transition: fill var(--transition);
 }
+.modal-textarea-field{
+    margin-bottom: 16px;
+}
 .modal-textarea{
+    display: block;
     width: 100%;
     height: 120px;
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -706,26 +705,25 @@ footer{
     padding-left: 16px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.17px;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--modal-overlay);
     outline: transparent;
     transition: border-color var(--transition);
+
 }
-.modal-textarea::placeholder{
+.modal-textarea::placeholder {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.17px;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
 }
 .modal-textarea:hover,
-.modal-textarea:focus{
+.modal-textarea:focus {
     border-color: var(--logo-brand);
 }
-.textarea{
-    margin-bottom: 16px;
-}
+
 .modal-checkbox-field{
     margin-bottom: 24px;
 }
